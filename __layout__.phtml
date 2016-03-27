@@ -1,5 +1,5 @@
     <!DOCTYPE html>
-    <html>
+    <html lang="<?php echo $locale; ?>">
     <head>
       <noscript>
 	    <meta http-equiv="refresh" content="0; url=http://browsehappy.com" />
@@ -19,6 +19,8 @@
       <?php endif; ?>
       
       <title><?php echo $page->getTitle(); ?></title>
+      
+      <link rel="alternate" href="<?php echo $currentUrl; ?>" hreflang="<?php echo $locale; ?>" />      
       
       <?php foreach ($this->getPluginBag()->getStylesheets() as $style): ?>
       <link href="<?php echo $style; ?>" rel="stylesheet" />
